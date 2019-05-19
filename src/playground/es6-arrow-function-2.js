@@ -11,7 +11,7 @@ console.log(add(55,5))
 
 const user = {
     name: 'Steve',
-    cities: ['Cleveland', 'Streetsboro', 'Kent'],
+    cities: ['Cleveland', 'Streetsboro', 'Kent', 'Austin', 'Chuncheon'],
     printPlacesLived() {
         return this.cities.map((city) => this.name + ' has lived in ' + city);
     }
@@ -21,7 +21,7 @@ console.log(user.printPlacesLived());
 
 const multiplier = {
   numbers: [2,4,6],
-  multiplyBy: 4,
+  multiplyBy: 2,
 
   multiply(){
     return this.numbers.map((number) => number * this.multiplyBy);
