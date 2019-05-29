@@ -27,6 +27,8 @@ var wipeArray = function wipeArray() {
 
 var appRoot = document.getElementById('app');
 
+// const numbers = [55, 101, 69]
+
 var renderIndecisionApp = function renderIndecisionApp() {
     var template = React.createElement(
         'div',
@@ -59,16 +61,14 @@ var renderIndecisionApp = function renderIndecisionApp() {
         React.createElement(
             'ol',
             null,
-            React.createElement(
-                'li',
-                null,
-                'Item one'
-            ),
-            React.createElement(
-                'li',
-                null,
-                'Item two'
-            )
+            app.options.map(function (option) {
+                return React.createElement(
+                    'li',
+                    { key: option },
+                    'Added Option: ',
+                    option
+                );
+            })
         ),
         React.createElement(
             'form',

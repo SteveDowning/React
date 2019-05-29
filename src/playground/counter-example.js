@@ -14,7 +14,7 @@ count = 0;
 renderCounterApp();
 };
 
-
+const appRoot = document.getElementById('app');
 
 const renderCounterApp = () => {
     const templateTwo = (

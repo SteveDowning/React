@@ -21,12 +21,14 @@ const onFormSubmit = (e) => {
 };
 
 const wipeArray = () => {
-app.options = [];
-renderIndecisionApp();
+    app.options = [];
+    renderIndecisionApp();
 };
 
 
 const appRoot = document.getElementById('app');
+
+// const numbers = [55, 101, 69]
 
 const renderIndecisionApp = () => {
     const template = (
@@ -37,8 +39,11 @@ const renderIndecisionApp = () => {
             <p>{app.options.length}</p>
             <button onClick={wipeArray}>Remove All</button>
             <ol>
-                <li>Item one</li>
-                <li>Item two</li>
+                {
+                    app.options.map((option) => {
+                        return <li key={option}>Added Option: {option}</li>
+                    })
+                }
             </ol>
             <form onSubmit={onFormSubmit}>
                 <input type="text" name="option" />
