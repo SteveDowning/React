@@ -11,11 +11,11 @@ const app = {
 const onFormSubmit = (e) => {
     e.preventDefault();
 
-    const option = e.target.elements.option.value;
+    const option = e.target.elements.UserInput.value;
 
     if (option) {
         app.options.push(option);
-        e.target.elements.option.value = '';
+        e.target.elements.UserInput.value = '';
         renderIndecisionApp();
     }
 };
@@ -52,8 +52,8 @@ const renderIndecisionApp = () => {
                 }
             </ol>
             <form onSubmit={onFormSubmit}>
-                <input type="text" name="option" />
-                <button>Add Option</button>
+                <input type="text" name="UserInput" />
+                <button>Add Options</button>
             </form>
         </div>
     );
