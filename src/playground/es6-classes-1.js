@@ -39,8 +39,6 @@ class Traveler extends Person {
         this.homeLocation = homeLocation;
     }
 
-
-
     getGreeting() {
         let greeting = super.getGreeting();
 
@@ -51,7 +49,7 @@ class Traveler extends Person {
     }
 }
 
-const me = new Traveler('Steve Downing', 53, 'Streetsboro');
+const me = new Traveler('Steve Downing', 53, 'CS');
 console.log(me.getGreeting());
 
 const other = new Traveler();
