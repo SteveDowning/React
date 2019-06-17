@@ -41,15 +41,20 @@ class Action extends React.Component {
 }
 
 class Options extends React.Component {
-    clearOptions(){
-        alert('Options cleared')
+    constructor(props) {
+        super(props);
+        this.clearOptions = this.clearOptions.bind(this);
+    }
+    clearOptions() {
+        console.log(this.props.options);
+        // alert('Options cleared')
     }
     render() {
         return (
             <div>
-            <button onClick={this.clearOptions}>Clear Options</button>
+                <button onClick={this.clearOptions}>Clear Options</button>
                 {
-                    this.props.options.map((item) => <Option key={item} optionText={item}/>)
+                    this.props.options.map((item) => <Option key={item} optionText={item} />)
                 }
             </div>
         );
